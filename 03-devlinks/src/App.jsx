@@ -9,9 +9,10 @@ function App() {
   return (
     <>
     <div id='App'>
-      <div className='perfil'>
 
 <Perfil/>
+
+      <div className='perfil'>
 
       <img src="https://placehold.co/200x200" alt=""/>
       <p>@Seu Nome</p>
