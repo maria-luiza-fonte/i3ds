@@ -19,7 +19,7 @@ function App() {
           <Link url={""}>Conheça o Curso Dev</Link>
         </ul>
 
-        <div className="socialLinks">
+        <div id="social-Links">
           <SocialLink url={"https://github.com/"} icon={"logo-github"} />
           <SocialLink
             url={"https://www.instagram.com/"}
