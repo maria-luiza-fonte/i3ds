@@ -1,42 +1,43 @@
+import { useState } from "react";
 import "./App.css";
-import Link from "./componts/link/Link";
-import Perfil from "./componts/Perfil/Perfil";
-import Rodape from "./componts/Rodape/Rodape";
-import SocialLink from "./componts/SocialLink/SocialLink";
+import Link from "./components/Link/Link";
+import Perfil from "./components/Perfil/Perfil";
+import Rodape from "./components/Rodape/Rodape";
+import SocialLink from "./components/SocialLink/SocialLink";
+import Switch from "./components/Switch/Switch";
+
+import foto from "./assets/images.png";
 
 function App() {
+  const [isLight, setIsLight] = useState(true);
+
+  const troca = () => {
+    setIsLight(!isLight);
+  };
+
   return (
-    <>
-      <div id="App">
-        <Perfil fotoPerfil={"https://placehold.co/100"}>Maria Luiza</Perfil>
+    <div id="App" className={isLight ? "light" : ""}>
+      <Perfil fotoPerfil={foto}>Maria Luiza </Perfil>
 
-        <div className="switch"> botão switch</div>
+      <Switch troca={troca} isLight={isLight} />
 
+      <div id="Link">
         <ul>
           <Link url={""}>Inscreva-se</Link>
           <Link url={""}>Minha playlist</Link>
-          <Link url={""}>Me pague um docinho</Link>
-          <Link url={""}>Conheça o Curso Dev</Link>
+          <Link url={""}>Me compre um docinho!</Link>
+          <Link url={""}>Conheça o Curso DEV</Link>
         </ul>
-
-        <div id="social-Links">
-          <SocialLink url={"https://github.com/"} icon={"logo-github"} />
-          <SocialLink
-            url={"https://www.instagram.com/"}
-            icon={"logo-instagram"}
-          />
-          <SocialLink
-            url={"https://www.linkedin.com.br/"}
-            icon={"logo-linkedin"}
-          />
-          <SocialLink url={"https://www.youtube.com/"} icon={"logo-youtube"} />
-        </div>
-
-        <div className="rodape"></div>
-
-        <Rodape>Maria Lulu</Rodape>
       </div>
-    </>
+
+      <div id="SocialLinks">
+        <SocialLink url={"https://github.com"} icon={"logo-github"} />
+        <SocialLink url={"https://instagram.com"} icon={"logo-instagram"} />
+        <SocialLink url={"https://youtube.com"} icon={"logo-youtube"} />
+        <SocialLink url={"https://br.linkedin.com/"} icon={"logo-linkedin"} />
+      </div>
+      <Rodape>Maria Lulu</Rodape>
+    </div>
   );
 }
 
