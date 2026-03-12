@@ -1,14 +1,17 @@
-import React from 'react'
+import React from "react";
+import { Link } from "react-router";
 
 const Header = () => {
   return (
-    <nav className='navbar'>
-      <div className='container'>
-<Link to="/">Home</Link>
-<Link to="/sobre">Sobre</Link>
+    <nav className="navbar">
+      <div className="container">
+        <Link to="/">Home</Link>
+        <Link to="/sobre">Sobre</Link>
+        <Link to="/contato">Contato</Link>
+        <Link to="/">Não Encontrado</Link>
       </div>
     </nav>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;
