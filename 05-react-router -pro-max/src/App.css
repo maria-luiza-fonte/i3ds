@@ -1,0 +1,30 @@
+ .navbar{
+background-color: rgb(194, 32, 194);
+
+ }
+
+ .container{
+  display: flex;
+  gap: 30px;
+  & a{
+    padding: 20px;
+    text-decoration: none;
+    color:white;
+   font-size: x-large;
+  }
+
+  & a:hover{
+color:rgb(245, 165, 245);
+background-color: rgb(238, 105, 255);
+  }
+ }
+
+ .containerApp{
+  min-height: 90vh;
+ }
+
+ fooder{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ }
